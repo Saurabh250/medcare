@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: 100, left: 80, right: 80),
+            padding: EdgeInsets.only(top: 90, left: 80, right: 80),
             child: Text(
               "MedCare",
               style: TextStyle(
