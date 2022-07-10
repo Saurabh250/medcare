@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, unused_local_variable
+
 import 'dart:convert';
 
 import 'package:medcare/constants/constants.dart';

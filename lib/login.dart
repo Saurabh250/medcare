@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, sort_child_properties_last, unused_import
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, sort_child_properties_last, unused_import, must_be_immutable, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:medcare/home.dart';
@@ -70,7 +70,7 @@ class Login extends StatelessWidget {
                             showDialog(
                                 context: context,
                                 builder: (context) => AlertDialog(
-                                      content: Text("Enter Password"),
+                                      content: Text("Enter Password "),
                                       actions: <Widget>[
                                         TextButton(
                                           onPressed: () {
