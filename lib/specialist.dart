@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:medcare/alldoctors.dart';
 
 class Specialist extends StatelessWidget {
   const Specialist({super.key});
@@ -30,7 +31,10 @@ class Specialist extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("Dermatology, Venereology & Leprosy"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -59,7 +63,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("Community Medicine"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -88,7 +95,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("Biophysics"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -117,7 +127,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("Biochemistry"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -146,7 +159,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("	Anesthesiology"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -175,7 +191,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("	Anatomy"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -204,7 +223,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("	Aerospace Medicine"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -233,7 +255,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("	ENT"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -262,7 +287,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("	General Surgery"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -291,7 +319,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("	Obstetrics and Gynaecology"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -320,7 +351,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("	Traumatology and Surgery"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -349,7 +383,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("	Otorhinolaryngology"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
@@ -378,7 +415,10 @@ class Specialist extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => AllDoctors())));
+                  },
                   child: Text("	Orthopedics"),
                   style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(
