@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:medcare/home.dart';
 import 'package:medcare/routes.dart';
-import 'package:medcare/service/http_request.dart';
+import 'package:medcare/Services/http_request.dart';
 
 class Login extends StatelessWidget {
   TextEditingController username = TextEditingController();
@@ -82,8 +82,8 @@ class Login extends StatelessWidget {
                                     ));
                           } else {
                             print(username.text);
-                            // loginUser("admin", "Developer@2022");
-                            Navigator.pushNamed(context, MyRoutes.homeRoute);
+                            loginUser("admin", "Developer@2022");
+                            //Navigator.pushNamed(context, MyRoutes.homeRoute);
                           }
                         },
                         child: Text("Log In"),

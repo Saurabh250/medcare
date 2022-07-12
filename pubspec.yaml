@@ -37,9 +37,17 @@ dependencies:
   bottom_navy_bar: ^6.0.0
   http: ^0.13.4
 
+  persistent_bottom_nav_bar: ^4.0.2
+  provider: ^6.0.3
+  flutter_spinkit: ^5.1.0
+  permission_handler: ^10.0.0
+  # agora
+  agora_rtc_engine: ^5.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_native_splash: ^2.2.4
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -60,11 +68,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/heartbeat.png
-    - assets/images/signin.png
-    - assets/images/home.png
-    - assets/images/homepage.png
-    - assets/images/hospital.png
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -92,3 +96,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/heartbeat.png
+  android: true
+  ios: true

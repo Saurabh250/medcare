@@ -6,6 +6,7 @@ import 'package:medcare/login.dart';
 import 'package:medcare/routes.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
