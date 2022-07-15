@@ -2,16 +2,15 @@
 
 import 'dart:convert';
 
-import 'package:medcare/constants/constants.dart';
 import 'package:http/http.dart';
+import '../Constants/constants.dart';
 
-Constants c = Constants();
 loginUser(email, password) async {
   final uri =
       Uri.parse('https://doctorapi.simulacratech.in/api/cockpit/authUser');
   final headers = {
-    'Content- Type': 'application/json',
-    'Authorization': 'Bearer $c.token',
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer $Constants.token',
   };
   Map<String, dynamic> body = {'user': email, 'password': password};
   String jsonBody = json.encode(body);

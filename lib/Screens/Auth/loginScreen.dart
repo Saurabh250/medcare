@@ -2,12 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:medcare/home.dart';
-import 'package:medcare/routes.dart';
-import 'package:medcare/Services/http_request.dart';
+import '../../routes.dart';
+import '../../Services/http_request.dart';
+import '../../Utils/size_config.dart';
 
-class Login extends StatelessWidget {
-  TextEditingController username = TextEditingController();
-  TextEditingController password = TextEditingController();
+class LoginScreen extends StatelessWidget {
+  //LoginScreen();
+  final TextEditingController _username = TextEditingController();
+  final TextEditingController _password = TextEditingController();
+  bool isLoading = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +30,12 @@ class Login extends StatelessWidget {
                       vertical: 16.0, horizontal: 60.0),
                   child: Column(
                     children: [
-                      TextFormField(
-                        controller: username,
+                      TextField(
+                        controller: _username,
+                        autofocus: true,
+                        enabled: true,
+                        keyboardType: TextInputType.emailAddress,
+                        cursorRadius: Radius.circular(30),
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30.0),
@@ -38,9 +45,10 @@ class Login extends StatelessWidget {
                       SizedBox(
                         height: 15,
                       ),
-                      TextFormField(
+                      TextField(
                         obscureText: true,
-                        controller: password,
+                        controller: _password,
+                        cursorRadius: Radius.circular(30.0),
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30.0),
@@ -52,7 +60,7 @@ class Login extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          if (username.text.isEmpty) {
+                          if (_username.text.isEmpty) {
                             showDialog(
                                 context: context,
                                 builder: (context) => AlertDialog(
@@ -66,7 +74,7 @@ class Login extends StatelessWidget {
                                         ),
                                       ],
                                     ));
-                          } else if (password.text.isEmpty) {
+                          } else if (_password.text.isEmpty) {
                             showDialog(
                                 context: context,
                                 builder: (context) => AlertDialog(
@@ -81,7 +89,8 @@ class Login extends StatelessWidget {
                                       ],
                                     ));
                           } else {
-                            print(username.text);
+                            print(_username.text);
+                            print(_password.text);
                             loginUser("admin", "Developer@2022");
                             //Navigator.pushNamed(context, MyRoutes.homeRoute);
                           }
