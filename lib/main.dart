@@ -2,9 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:medcare/home.dart';
-import 'package:medcare/login.dart';
+import 'package:medcare/Screens/Auth/loginScreen.dart';
 import 'package:medcare/routes.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+
+import 'Utils/size_config.dart';
+import 'globalvariable.dart';
+import 'wrapper.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,14 +21,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      routes: {
-        "/": (context) => Login(),
-        MyRoutes.homeRoute: (context) => Home(),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return OrientationBuilder(
+          builder: (context, orientation) {
+            SizeConfig().init(constraints, orientation);
+            return MaterialApp(
+              navigatorKey: GlobalVariable.navState,
+              title: 'Amigo',
+              debugShowCheckedModeBanner: false,
+              home: Wrapper(
+                index: 0,
+              ),
+            );
+          },
+        );
       },
     );
   }
