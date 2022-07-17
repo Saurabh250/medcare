@@ -10,7 +10,7 @@ loginUser(email, password) async {
   final uri =
       Uri.parse('https://doctorapi.simulacratech.in/api/cockpit/authUser');
   final headers = {
-    'Content- Type': 'application/json',
+    'Content-Type': 'application/json',
     'Authorization': 'Bearer $c.token',
   };
   Map<String, dynamic> body = {'user': email, 'password': password};

@@ -82,8 +82,8 @@ class Login extends StatelessWidget {
                                     ));
                           } else {
                             print(username.text);
-                            loginUser("admin", "Developer@2022");
-                            //Navigator.pushNamed(context, MyRoutes.homeRoute);
+                            //loginUser("admin", "Developer@2022");
+                            Navigator.pushNamed(context, MyRoutes.homeRoute);
                           }
                         },
                         child: Text("Log In"),
