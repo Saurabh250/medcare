@@ -7,7 +7,7 @@ import '../../Services/http_request.dart';
 import '../../Utils/size_config.dart';
 
 class LoginScreen extends StatelessWidget {
-  //LoginScreen();
+  LoginScreen();
   final TextEditingController _username = TextEditingController();
   final TextEditingController _password = TextEditingController();
   bool isLoading = false;
@@ -89,16 +89,10 @@ class LoginScreen extends StatelessWidget {
                                       ],
                                     ));
                           } else {
-<<<<<<< HEAD:lib/login.dart
-                            print(username.text);
-                            //loginUser("admin", "Developer@2022");
-                            Navigator.pushNamed(context, MyRoutes.homeRoute);
-=======
                             print(_username.text);
                             print(_password.text);
                             loginUser("admin", "Developer@2022");
-                            //Navigator.pushNamed(context, MyRoutes.homeRoute);
->>>>>>> 9d982efb23cd642047fab4ad80661954ad1ed7ca:lib/Screens/Auth/loginScreen.dart
+                            Navigator.pushNamed(context, MyRoutes.homeRoute);
                           }
                         },
                         child: Text("Log In"),
