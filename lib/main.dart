@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:medcare/home.dart';
 import 'package:medcare/Screens/Auth/loginScreen.dart';
 import 'package:medcare/routes.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'Utils/size_config.dart';
 import 'globalvariable.dart';
