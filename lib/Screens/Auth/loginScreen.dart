@@ -106,7 +106,7 @@ class LoginScreen extends StatelessWidget {
                               fontSize: 20,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
-                          primary: Color.fromARGB(156, 15, 171, 243),
+                          primary: Color.fromRGBO(0, 150, 199, 100),
                           side: BorderSide(width: 1, color: Colors.black),
                           elevation: 1,
                           fixedSize: const Size(300, 50),

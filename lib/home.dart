@@ -2,6 +2,7 @@
 
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:medcare/beds.dart';
 import 'package:medcare/home_page.dart';
 import 'package:medcare/reminder.dart';
 
@@ -43,8 +44,8 @@ class _HomeState extends State<Home> {
           children: <Widget>[
             HomePage(),
             reminder(),
-            reminder(),
-            reminder(),
+            beds(),
+            beds(),
           ],
         ),
       ),
