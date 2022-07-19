@@ -92,7 +92,12 @@ class LoginScreen extends StatelessWidget {
                             print(_username.text);
                             print(_password.text);
                             loginUser("admin", "Developer@2022");
-                            Navigator.pushNamed(context, MyRoutes.homeRoute);
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Home(),
+                              ),
+                            );
                           }
                         },
                         child: Text("Log In"),
