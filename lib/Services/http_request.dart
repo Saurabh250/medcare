@@ -28,5 +28,11 @@ loginUser(email, password) async {
   log(response.toString());
 
   int statusCode = response.statusCode;
+  log(statusCode.toString());
   print(json.decode(response.body));
+  if (statusCode == 200) {
+    return true;
+  } else {
+    return false;
+  }
 }

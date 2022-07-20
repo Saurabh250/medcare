@@ -91,13 +91,28 @@ class LoginScreen extends StatelessWidget {
                           } else {
                             print(_username.text);
                             print(_password.text);
-                            loginUser("admin", "Developer@2022");
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Home(),
-                              ),
-                            );
+                            if (loginUser("admin", "Developer@2022")) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Home(),
+                                ),
+                              );
+                            } else {
+                              showDialog(
+                                  context: context,
+                                  builder: (context) => AlertDialog(
+                                        content: Text("Wrong Credentials"),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: Text("Ok"),
+                                          ),
+                                        ],
+                                      ));
+                            }
                           }
                         },
                         child: Text("Log In"),
