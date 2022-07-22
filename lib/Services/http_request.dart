@@ -36,3 +36,27 @@ loginUser(email, password) async {
     return false;
   }
 }
+
+specialist() async {
+  final uri = Uri.parse(
+      'https://doctorapi.simulacratech.in/api/collections/get/Specialities');
+  final headers = {
+    'Content-Type': 'application/json',
+    'authorization': 'Bearer $token',
+  };
+  // Map<String, dynamic> body = {"user": "$email", "password": "$password"};
+  //String jsonBody = json.encode(body);
+  //log(headers.toString());
+  //log(jsonBody);
+  final encoding = Encoding.getByName('utf-8');
+
+  Response response = await post(
+    uri,
+    headers: headers,
+    //body: jsonBody,
+  );
+  //log(response.toString());
+
+  int statusCode = response.statusCode;
+  print(json.decode(response.body));
+}

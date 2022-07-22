@@ -1,10 +1,30 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:medcare/Services/http_request.dart';
+import 'package:medcare/Utils/size_config.dart';
 import 'package:medcare/alldoctors.dart';
 
 class Specialist extends StatelessWidget {
-  const Specialist({super.key});
+  Specialist({super.key});
+  int numberOfCards = 13;
+  String titleOfCategory = 'problem';
+
+  final List entries = [
+    {"name": "Dermatology, Venereology & Leprosy", "color": Colors.blue},
+    {"name": "Community Medicine", "color": Colors.blue},
+    {"name": "Biophysics", "color": Colors.blue},
+    {"name": "Biochemistry", "color": Colors.blue},
+    {"name": "Anesthesiology", "color": Colors.blue},
+    {"name": "Anatomy", "color": Colors.blue},
+    {"name": "Aerospace Medicine", "color": Colors.blue},
+    {"name": "ENT", "color": Colors.blue},
+    {"name": "General Surgery", "color": Colors.blue},
+    {"name": "Obstetrics and Gynaecology", "color": Colors.blue},
+    {"name": "Traumatology and Surgery", "color": Colors.blue},
+    {"name": "Otorhinolaryngology", "color": Colors.blue},
+    {"name": "Orthopedics", "color": Colors.blue},
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -12,435 +32,59 @@ class Specialist extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding:
-                  EdgeInsets.only(top: 80, left: 100, right: 80, bottom: 10),
-              child: Text(
-                "Specialists",
-                style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 70),
+                child: Text(
+                  "Specialist",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                    left: 10,
-                  ),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("Dermatology, Venereology & Leprosy"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("Community Medicine"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("Biophysics"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("Biochemistry"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("	Anesthesiology"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("	Anatomy"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("	Aerospace Medicine"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("	ENT"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("	General Surgery"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("	Obstetrics and Gynaecology"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("	Traumatology and Surgery"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("	Otorhinolaryngology"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: ((context) => AllDoctors())));
-                  },
-                  child: Text("	Orthopedics"),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    primary: Color.fromARGB(156, 15, 171, 243),
-                    side: BorderSide(width: 1, color: Colors.black),
-                    elevation: 1,
-                    fixedSize: const Size(370, 50),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 40, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: GridView.builder(
+                  shrinkWrap: true,
+                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 200,
+                      childAspectRatio: 3 / 2,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20),
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: entries.length,
+                  itemBuilder: (BuildContext ctx, index) {
+                    return InkWell(
+                      onTap: () {
+                        debugPrint(entries[index]["name"]);
+                        debugPrint("pressed");
+                        specialist();
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: ((context) => AllDoctors())));
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            color: entries[index]["color"],
+                            borderRadius: BorderRadius.circular(15)),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 30),
+                          child: Text(
+                            entries[index]["name"],
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    );
+                  }),
             ),
           ],
         ),
       ),
     );
   }
+
+
+  List
 }

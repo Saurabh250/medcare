@@ -3,6 +3,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:medcare/specialist.dart';
 import 'package:provider/provider.dart';
 
 import 'Models/userdetail.dart';
@@ -21,7 +22,8 @@ class Wrapper extends StatelessWidget {
     //log(user.toString());
 
     if (f == true) {
-      return LoginScreen();
+      return Specialist();
+      //LoginScreen();
     } else {
       //DatabaseService().postRegistrationToken();
       return NavigatingScreen(
