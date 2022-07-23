@@ -6,7 +6,6 @@ import 'package:medcare/Services/http_request.dart';
 import 'package:medcare/beds.dart';
 import 'package:medcare/specialist.dart';
 import 'package:medcare/reminder.dart';
-import 'package:medcare/speciallist_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -86,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                                           offset: Offset(0, 1)),
                                     ]),
                                 height: 150,
-                                width: 150,
+                                width: 160,
                                 child: Column(children: [
                                   Padding(padding: EdgeInsets.only(top: 30)),
                                   FaIcon(
@@ -156,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Padding(padding: EdgeInsets.only(right: 20)),
+                          Padding(padding: EdgeInsets.only(right: 10)),
                           InkWell(
                             onTap: () {
                               Navigator.of(context).push(

@@ -3,6 +3,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:medcare/Screens/Auth/signup.dart';
+import 'package:medcare/Utils/constant_components.dart';
 import 'package:medcare/home.dart';
 import '../../routes.dart';
 import '../../Services/http_request.dart';
@@ -137,6 +139,30 @@ class LoginScreen extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
                           ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              "Don't have an account?",
+                              style: TextStyle(fontSize: 14),
+                            ),
+                            TextButton(
+                              style: TextButton.styleFrom(
+                                textStyle: const TextStyle(fontSize: 16),
+                              ),
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => Signup()));
+                              },
+                              child: const Text('Sign Up'),
+                            ),
+                          ],
                         ),
                       ),
                     ],

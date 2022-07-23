@@ -13,9 +13,7 @@ class reminder extends StatelessWidget {
         title: Text(
           "Set Reminder",
           style: TextStyle(
-              fontSize: 17,
-              color: Colors.blue[600],
-              fontWeight: FontWeight.bold),
+              fontSize: 17, color: Colors.white, fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),

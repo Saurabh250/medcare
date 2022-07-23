@@ -59,10 +59,6 @@ class _HomeState extends State<Home> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.phone_in_talk),
-            label: 'Call',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Account',
           ),
