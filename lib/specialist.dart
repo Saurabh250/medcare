@@ -84,7 +84,4 @@ class Specialist extends StatelessWidget {
       ),
     );
   }
-
-
-  List
 }

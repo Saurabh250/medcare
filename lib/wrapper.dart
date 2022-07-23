@@ -22,8 +22,7 @@ class Wrapper extends StatelessWidget {
     //log(user.toString());
 
     if (f == true) {
-      return Specialist();
-      //LoginScreen();
+      return LoginScreen();
     } else {
       //DatabaseService().postRegistrationToken();
       return NavigatingScreen(

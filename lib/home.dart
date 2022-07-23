@@ -45,7 +45,6 @@ class _HomeState extends State<Home> {
             HomePage(),
             reminder(),
             beds(),
-            beds(),
           ],
         ),
       ),

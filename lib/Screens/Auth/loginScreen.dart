@@ -1,5 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, sort_child_properties_last, unused_import, must_be_immutable, avoid_print
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:medcare/home.dart';
 import '../../routes.dart';
@@ -91,28 +93,33 @@ class LoginScreen extends StatelessWidget {
                           } else {
                             print(_username.text);
                             print(_password.text);
-                            if (loginUser("admin", "Developer@2022")) {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Home(),
-                                ),
-                              );
-                            } else {
-                              showDialog(
-                                  context: context,
-                                  builder: (context) => AlertDialog(
-                                        content: Text("Wrong Credentials"),
-                                        actions: <Widget>[
-                                          TextButton(
-                                            onPressed: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: Text("Ok"),
-                                          ),
-                                        ],
-                                      ));
-                            }
+                            loginUser(_username.text, _password.text);
+
+                            Timer(Duration(seconds: 1), () {
+                              print(mess());
+                              if (mess() == 200) {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Home(),
+                                  ),
+                                );
+                              } else {
+                                showDialog(
+                                    context: context,
+                                    builder: (context) => AlertDialog(
+                                          content: Text("Wrong Credentials"),
+                                          actions: <Widget>[
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                              child: Text("Ok"),
+                                            ),
+                                          ],
+                                        ));
+                              }
+                            });
                           }
                         },
                         child: Text("Log In"),

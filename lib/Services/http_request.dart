@@ -7,6 +7,7 @@ import 'package:http/http.dart';
 import 'package:medcare/constants/constants.dart';
 
 String token = Constants.token;
+late int statusCode;
 loginUser(email, password) async {
   final uri =
       Uri.parse('https://doctorapi.simulacratech.in/api/cockpit/authUser');
@@ -27,14 +28,15 @@ loginUser(email, password) async {
   );
   log(response.toString());
 
-  int statusCode = response.statusCode;
+  statusCode = response.statusCode;
   log(statusCode.toString());
   print(json.decode(response.body));
-  if (statusCode == 200) {
-    return true;
-  } else {
-    return false;
-  }
+  print("fgfghfhg" + statusCode.toString());
+  //return statusCode.toString();
+}
+
+mess() {
+  return statusCode;
 }
 
 specialist() async {
