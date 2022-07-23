@@ -20,7 +20,6 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    specialist();
   }
 
   @override
@@ -162,7 +161,8 @@ class _HomePageState extends State<HomePage> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => beds(),
+                                  builder: (context) =>
+                                      beds(title: "Nearby Clinic"),
                                 ),
                               );
                             },
@@ -206,7 +206,8 @@ class _HomePageState extends State<HomePage> {
                           InkWell(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => beds()));
+                                  builder: (context) =>
+                                      beds(title: "Available Beds")));
                             },
                             child: Card(
                               child: Container(

@@ -1,18 +1,24 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_import, sized_box_for_whitespace
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:medcare/Models/hospitalModel.dart';
+import 'package:medcare/Services/http_request.dart';
 
 class beds extends StatelessWidget {
-  const beds({super.key});
+  beds({super.key, required this.title});
+  late String title;
 
   @override
   Widget build(BuildContext context) {
+    var items = hospitalList();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[200],
         title: Text(
-          "Displaying Available Beds",
+          title,
           style: TextStyle(
               fontSize: 17,
               color: Colors.blue[600],
@@ -40,59 +46,63 @@ class beds extends StatelessWidget {
                 ),
               ],
             ),
-            Card(
-              child: Container(
-                height: 150,
-                width: 550,
-                child: Column(children: [
-                  Padding(padding: EdgeInsets.only(top: 30)),
-                  Text(
-                    "Sri Jayadeva Institute of Cardiology(SJIC)",
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
-                  Text(
-                    "+91 5887357996",
-                    style: TextStyle(fontSize: 14),
-                  ),
-                  Text(
-                    "15th main road, kengeri Clinic, doctors for various veins treatment",
-                    style: TextStyle(fontSize: 14),
-                  ),
-                  Text(
-                    "20 beds available",
-                    style: TextStyle(fontSize: 14),
-                  ),
-                ]),
-              ),
-            ),
-            Card(
-              child: Container(
-                height: 150,
-                width: 550,
-                child: Column(children: [
-                  Padding(padding: EdgeInsets.only(top: 30)),
-                  Text(
-                    "Rajarajeshwari Medical College and Hospital(RRMCH)",
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
-                  Text(
-                    "+91 9874563210",
-                    style: TextStyle(fontSize: 14),
-                  ),
-                  Text(
-                    "15th main road, kengeri Clinic, doctors for various bones treatment",
-                    style: TextStyle(fontSize: 14),
-                  ),
-                  Text(
-                    "30 beds available",
-                    style: TextStyle(fontSize: 14),
-                  ),
-                ]),
-              ),
-            ),
+            ListView.builder(
+                shrinkWrap: true,
+                physics: ClampingScrollPhysics(),
+                scrollDirection: Axis.vertical,
+                itemCount: items.length,
+                itemBuilder: (context, index) {
+                  var data = items[index];
+                  return Card(
+                    child: Container(
+                      height: 150,
+                      width: 550,
+                      child: Column(children: [
+                        Padding(padding: EdgeInsets.only(top: 30)),
+                        Text(
+                          data.name,
+                          style: TextStyle(fontSize: 18, color: Colors.black),
+                        ),
+                        Text(
+                          data.phone,
+                          style: TextStyle(fontSize: 14),
+                        ),
+                        Text(
+                          data.address,
+                          style: TextStyle(fontSize: 14),
+                        ),
+                        Text(
+                          data.beds + " beds available",
+                          style: TextStyle(fontSize: 14),
+                        ),
+                      ]),
+                    ),
+                  );
+                }),
           ]),
         ),
       ),
     );
+  }
+
+  List<HospitalList> hospitalList() {
+    var list = <HospitalList>[];
+    HospitalList data;
+    int index = nohospital;
+    //print(index);
+    if (index != 0) {
+      for (int i = 0; i < index; i++) {
+        data = HospitalList(
+            json.decode(hospitalresponse)["entries"][i]["name"],
+            json.decode(hospitalresponse)["entries"][i]["phone"],
+            json.decode(hospitalresponse)["entries"][i]["address"],
+            json.decode(hospitalresponse)["entries"][i]["pricing"],
+            json.decode(hospitalresponse)["entries"][i]["rating"],
+            json.decode(hospitalresponse)["entries"][i]["Beds"]);
+        list.add(data);
+        //  print(data);
+      }
+    }
+    return list;
   }
 }

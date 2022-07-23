@@ -10,6 +10,8 @@ String token = Constants.token;
 late int statusCode;
 late int nospecialist;
 late String specialistresponse;
+late int nohospital;
+late String hospitalresponse;
 
 loginUser(email, password) async {
   final uri =
@@ -60,4 +62,30 @@ specialist() async {
   //print(json.decode(specialistresponse)["entries"][0]["name"]);
   nospecialist = json.decode(specialistresponse)["total"];
   //print(nospecialist);
+}
+
+hospitals() async {
+  final uri = Uri.parse(
+      'https://doctorapi.simulacratech.in/api/collections/get/Hospitals');
+  final headers = {
+    'Content-Type': 'application/json',
+    'authorization': 'Bearer $token',
+  };
+  final encoding = Encoding.getByName('utf-8');
+
+  Response response = await post(
+    uri,
+    headers: headers,
+  );
+  int statusCode = response.statusCode;
+  hospitalresponse = response.body;
+  print(json.decode(hospitalresponse));
+  print(json.decode(hospitalresponse)["entries"][0]["name"]);
+  print(json.decode(hospitalresponse)["entries"][0]["phone"]);
+  print(json.decode(hospitalresponse)["entries"][0]["address"]);
+  print(json.decode(hospitalresponse)["entries"][0]["pricing"]);
+  print(json.decode(hospitalresponse)["entries"][0]["rating"]);
+  print(json.decode(hospitalresponse)["entries"][0]["Beds"]);
+  nohospital = json.decode(hospitalresponse)["total"];
+  print(nohospital);
 }
