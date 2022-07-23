@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:medcare/Models/specialistModel.dart';
 import 'package:medcare/Services/http_request.dart';
 import 'package:medcare/Utils/size_config.dart';
 import 'package:medcare/alldoctors.dart';
@@ -28,6 +31,7 @@ class Specialist extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var items = specialistList(); // list assign
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -46,16 +50,17 @@ class Specialist extends StatelessWidget {
               child: GridView.builder(
                   shrinkWrap: true,
                   gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                      maxCrossAxisExtent: 200,
-                      childAspectRatio: 3 / 2,
-                      crossAxisSpacing: 20,
+                      maxCrossAxisExtent: 180,
+                      childAspectRatio: 2.5,
+                      crossAxisSpacing: 15,
                       mainAxisSpacing: 20),
                   physics: NeverScrollableScrollPhysics(),
-                  itemCount: entries.length,
+                  itemCount: items.length,
                   itemBuilder: (BuildContext ctx, index) {
+                    var data = items[index]; // index value of list
                     return InkWell(
                       onTap: () {
-                        debugPrint(entries[index]["name"]);
+                        debugPrint(data.name);
                         debugPrint("pressed");
                         specialist();
                         Navigator.of(context).push(MaterialPageRoute(
@@ -64,12 +69,12 @@ class Specialist extends StatelessWidget {
                       child: Container(
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
-                            color: entries[index]["color"],
+                            color: Colors.blue,
                             borderRadius: BorderRadius.circular(15)),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 30),
+                          padding: const EdgeInsets.symmetric(horizontal: 5),
                           child: Text(
-                            entries[index]["name"],
+                            data.name,
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
@@ -83,5 +88,21 @@ class Specialist extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  List<SpecialistList> specialistList() {
+    var list = <SpecialistList>[];
+    SpecialistList data;
+    int index = nospecialist;
+    // print(index);
+    if (index != 0) {
+      for (int i = 0; i < index; i++) {
+        data = SpecialistList(
+            json.decode(specialistresponse)["entries"][i]["name"]);
+        list.add(data);
+        //  print(data);
+      }
+    }
+    return list;
   }
 }

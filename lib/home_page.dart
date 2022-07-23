@@ -1,16 +1,27 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, sized_box_for_whitespace
 
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:medcare/Services/http_request.dart';
 import 'package:medcare/beds.dart';
 import 'package:medcare/specialist.dart';
 import 'package:medcare/reminder.dart';
 import 'package:medcare/speciallist_list.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    specialist();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +78,7 @@ class HomePage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: const BorderRadius.all(
-                                        const Radius.circular(15)),
+                                        Radius.circular(15)),
                                     boxShadow: [
                                       BoxShadow(
                                           color: Colors.black,
