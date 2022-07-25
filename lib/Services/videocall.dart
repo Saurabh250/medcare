@@ -49,11 +49,6 @@ class _VideoCallState extends State<VideoCall> {
               ),
               AgoraVideoButtons(
                 client: client,
-                enabledButtons: const [
-                  BuiltInButtons.toggleCamera,
-                  BuiltInButtons.callEnd,
-                  BuiltInButtons.toggleMic,
-                ],
               ),
             ],
           ),
