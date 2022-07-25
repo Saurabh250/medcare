@@ -31,14 +31,7 @@ Drawer appDrawer(BuildContext context) => Drawer(
                 }), */
 
                 //-- Contact us using email
-                textButton('Contact Us', () {
-                  String encodeQueryParameters(Map<String, String> params) {
-                    return params.entries
-                        .map((e) =>
-                            '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
-                        .join();
-                  }
-                }),
+                textButton('Contact Us', () {}),
 
                 textButton('Report a Bug', () {
                   String encodeQueryParameters(Map<String, String> params) {
@@ -107,7 +100,7 @@ final OutlineInputBorder border = OutlineInputBorder(
   borderRadius: BorderRadius.circular(
     5.7 * 7,
   ),
-  borderSide: BorderSide(
+  borderSide: const BorderSide(
     color: amigo_grey,
     width: 10 * 2,
   ),
@@ -116,7 +109,7 @@ final OutlineInputBorder focusedBorder = OutlineInputBorder(
   borderRadius: BorderRadius.circular(
     2.7 * 7,
   ),
-  borderSide: BorderSide(
+  borderSide: const BorderSide(
     color: amigo_grey,
     width: 2.7 * .2,
   ),
@@ -125,7 +118,7 @@ final OutlineInputBorder errorBorder = OutlineInputBorder(
   borderRadius: BorderRadius.circular(
     2.7 * 7,
   ),
-  borderSide: BorderSide(
+  borderSide: const BorderSide(
     color: amigo_error_red,
     width: 2.7 * .2,
   ),
