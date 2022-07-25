@@ -17,7 +17,6 @@ class DoctorInfo extends StatelessWidget {
             height: 320,
             width: 400,
             color: Colors.blue[100],
-            // ignore: prefer_const_literals_to_create_immutables
             child: Column(
               children: [
                 Padding(
@@ -83,73 +82,71 @@ class DoctorInfo extends StatelessWidget {
             ),
           ),
         ),
-        Container(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 30),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 250),
-                  child: Text(
-                    "Education",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
+        Padding(
+          padding: const EdgeInsets.only(top: 30),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 250),
+                child: Text(
+                  "Education",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
-                SizedBox(height: 8),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25, right: 120),
-                  child: Text(
-                    "MD-General Medicine | College name MBBS - Nephrology | More info",
-                    style: TextStyle(fontSize: 14),
-                  ),
+              ),
+              SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.only(left: 25, right: 120),
+                child: Text(
+                  "MD-General Medicine | College name MBBS - Nephrology | More info",
+                  style: TextStyle(fontSize: 14),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 30, right: 220),
-                  child: Text(
-                    "Specialization",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30, right: 220),
+                child: Text(
+                  "Specialization",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10, right: 160, left: 25),
-                  child: Text(
-                    "Consultation Physician Internal Medicine",
-                    style: TextStyle(fontSize: 16),
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, right: 160, left: 25),
+                child: Text(
+                  "Consultation Physician Internal Medicine",
+                  style: TextStyle(fontSize: 16),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 30, right: 200),
-                  child: Text(
-                    "Services Offered",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30, right: 200),
+                child: Text(
+                  "Services Offered",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 25, right: 160),
-                  child: Text(
-                    "Peritioneal Dialysis Kidney Problems",
-                    style: TextStyle(fontSize: 16),
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, left: 25, right: 160),
+                child: Text(
+                  "Peritioneal Dialysis Kidney Problems",
+                  style: TextStyle(fontSize: 16),
                 ),
-                SizedBox(height: 30),
-                ElevatedButton.icon(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => const VideoCall(),
-                      ),
-                    );
-                  },
-                  icon: Icon(Icons.videocam),
-                  label: Text("Video Call"),
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
+              ),
+              SizedBox(height: 30),
+              ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const VideoCall(),
                     ),
+                  );
+                },
+                icon: Icon(Icons.videocam),
+                label: Text("Video Call"),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ]),

@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:medcare/Services/http_request.dart';
 import 'package:medcare/beds.dart';
 import 'package:medcare/specialist.dart';
 import 'package:medcare/reminder.dart';
@@ -17,7 +16,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -118,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: const BorderRadius.all(
-                                        const Radius.circular(15)),
+                                        Radius.circular(15)),
                                     boxShadow: [
                                       BoxShadow(
                                           color: Colors.black,
@@ -170,7 +168,7 @@ class _HomePageState extends State<HomePage> {
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: const BorderRadius.all(
-                                        const Radius.circular(15)),
+                                        Radius.circular(15)),
                                     boxShadow: [
                                       BoxShadow(
                                           color: Colors.black,
@@ -213,7 +211,7 @@ class _HomePageState extends State<HomePage> {
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: const BorderRadius.all(
-                                        const Radius.circular(15)),
+                                        Radius.circular(15)),
                                     boxShadow: [
                                       BoxShadow(
                                           color: Colors.black,

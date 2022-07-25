@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => Dashboard(),
+                                    builder: (context) => const Dashboard(),
                                     //builder: (context) => EditAccount(),
                                   ),
                                 );
@@ -280,7 +280,7 @@ Column buildTalkToExpertCard() {
                   ),
 
                   // out button
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: SizeConfig.heightMultiplier! * 5.5,
                     child: ElevatedButton(
@@ -391,7 +391,7 @@ Column buildHaveADoubtCard() {
                   ),
 
                   // out button
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: SizeConfig.heightMultiplier! * 5.5,
                     child: ElevatedButton(
@@ -432,7 +432,6 @@ Column buildHaveADoubtCard() {
 
 Widget listingOfCategories(
     String title, String titleOfCategory, int numberOfCards) {
-  int totalGridToShow = 20;
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -459,7 +458,7 @@ Widget listingOfCategories(
         padding:
             EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier! * 2.5),
         child: Center(
-          child: Container(
+          child: SizedBox(
             height: SizeConfig.heightMultiplier! * 5.5,
             child: ElevatedButton(
               style: ButtonStyle(

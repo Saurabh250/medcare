@@ -9,13 +9,13 @@ class AllDoctors extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[200],
-        title: Text(
+        title: const Text(
           "Doctor List",
           style: TextStyle(
               fontSize: 17, color: Colors.white, fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -23,10 +23,10 @@ class AllDoctors extends StatelessWidget {
       ),
       body: SingleChildScrollView(
           child: Padding(
-        padding: EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(15.0),
         child: Column(children: [
           Row(
-            children: [
+            children: const [
               Text(
                 "Results showing available doctors",
                 style: TextStyle(
@@ -38,14 +38,14 @@ class AllDoctors extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => DoctorInfo()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const DoctorInfo()));
             },
             child: Card(
-              child: Container(
+              child: SizedBox(
                 height: 120,
                 width: 500,
-                child: Column(children: [
+                child: Column(children: const [
                   Padding(
                       padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
                   Text(
@@ -73,14 +73,14 @@ class AllDoctors extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => DoctorInfo()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const DoctorInfo()));
             },
             child: Card(
-              child: Container(
+              child: SizedBox(
                 height: 120,
                 width: 500,
-                child: Column(children: [
+                child: Column(children: const [
                   Padding(
                       padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
                   Text(
@@ -108,14 +108,14 @@ class AllDoctors extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => DoctorInfo()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const DoctorInfo()));
             },
             child: Card(
-              child: Container(
+              child: SizedBox(
                 height: 120,
                 width: 500,
-                child: Column(children: [
+                child: Column(children: const [
                   Padding(
                       padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
                   Text(
@@ -143,14 +143,14 @@ class AllDoctors extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => DoctorInfo()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const DoctorInfo()));
             },
             child: Card(
-              child: Container(
+              child: SizedBox(
                 height: 120,
                 width: 500,
-                child: Column(children: [
+                child: Column(children: const [
                   Padding(
                       padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
                   Text(
@@ -177,10 +177,10 @@ class AllDoctors extends StatelessWidget {
             ),
           ),
           Card(
-            child: Container(
+            child: SizedBox(
               height: 120,
               width: 500,
-              child: Column(children: [
+              child: Column(children: const [
                 Padding(padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
                 Text(
                   "Dr. Janice",

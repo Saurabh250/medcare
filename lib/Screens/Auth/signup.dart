@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:medcare/home.dart';
-import 'package:medcare/home_page.dart';
 
 class Signup extends StatelessWidget {
   Signup({super.key});
@@ -34,7 +33,7 @@ class Signup extends StatelessWidget {
           child: Column(
             children: [
               Row(
-                children: [
+                children: const [
                   Text(
                     "Name",
                     style: TextStyle(
@@ -59,7 +58,7 @@ class Signup extends StatelessWidget {
                 height: 20,
               ),
               Row(
-                children: [
+                children: const [
                   Text(
                     "Email Address",
                     style: TextStyle(
@@ -84,7 +83,7 @@ class Signup extends StatelessWidget {
                 height: 20,
               ),
               Row(
-                children: [
+                children: const [
                   Text(
                     "Password",
                     style: TextStyle(
@@ -110,7 +109,7 @@ class Signup extends StatelessWidget {
                 height: 20,
               ),
               Row(
-                children: [
+                children: const [
                   Text(
                     "Confirm Password",
                     style: TextStyle(
@@ -194,7 +193,6 @@ class Signup extends StatelessWidget {
                               ],
                             ));
                   } else if (password.text == cpassword.text) {
-                    print("correct");
                     Navigator.of(context)
                         .push(MaterialPageRoute(builder: (context) => Home()));
                   } else {
