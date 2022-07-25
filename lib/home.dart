@@ -23,7 +23,6 @@ class _HomeState extends State<Home> {
     super.initState();
     _pageController = PageController();
     specialist();
-    hospitals();
   }
 
   @override
