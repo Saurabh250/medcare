@@ -2,6 +2,7 @@
 
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:medcare/Screens/Auth/accountinfo.dart';
 import 'package:medcare/Services/http_request.dart';
 import 'package:medcare/beds.dart';
 import 'package:medcare/home_page.dart';
@@ -46,21 +47,31 @@ class _HomeState extends State<Home> {
           },
           children: <Widget>[
             HomePage(),
-            reminder(),
-            reminder(),
-            //beds(),
+            AccountInfo(),
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+      bottomNavigationBar: BottomNavyBar(
+        selectedIndex: _currentIndex,
+        showElevation: true,
+        itemCornerRadius: 25,
+        curve: Curves.easeIn,
+        onItemSelected: (index) => {
+          setState(() => _currentIndex = index),
+          _pageController!.jumpToPage(index)
+        },
+        items: <BottomNavyBarItem>[
+          BottomNavyBarItem(
+            icon: const Icon(Icons.home),
+            title: const Text("Home"),
+            activeColor: Colors.blue,
+            textAlign: TextAlign.center,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Account',
+          BottomNavyBarItem(
+            icon: const Icon(Icons.account_box_rounded),
+            title: const Text("Account Setting"),
+            activeColor: Colors.blue,
+            textAlign: TextAlign.center,
           ),
         ],
       ),

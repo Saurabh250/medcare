@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:medcare/Services/videocall.dart';
 
 class DoctorInfo extends StatelessWidget {
   const DoctorInfo({super.key});
@@ -132,7 +133,13 @@ class DoctorInfo extends StatelessWidget {
                 ),
                 SizedBox(height: 30),
                 ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const VideoCall(),
+                      ),
+                    );
+                  },
                   icon: Icon(Icons.videocam),
                   label: Text("Video Call"),
                   style: ElevatedButton.styleFrom(

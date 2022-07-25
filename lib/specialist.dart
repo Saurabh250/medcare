@@ -39,9 +39,11 @@ class Specialist extends StatelessWidget {
             Center(
               child: Padding(
                 padding: const EdgeInsets.only(top: 70),
-                child: Text(
-                  "Specialist",
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                child: Container(
+                  child: Text(
+                    "Specialist",
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
             ),

@@ -11,7 +11,6 @@ import '../../Services/http_request.dart';
 import '../../Utils/size_config.dart';
 
 class LoginScreen extends StatelessWidget {
-  LoginScreen();
   final TextEditingController _username = TextEditingController();
   final TextEditingController _password = TextEditingController();
   bool isLoading = false;

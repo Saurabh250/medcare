@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:medcare/Screens/Auth/loginScreen.dart';
 
 class AccountInfo extends StatelessWidget {
   const AccountInfo({super.key});
@@ -20,6 +21,24 @@ class AccountInfo extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 30),
+        child: Container(
+          child: TextButton(
+            child: Text(
+              "log Out",
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+            ),
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => LoginScreen()));
+            },
+          ),
         ),
       ),
     );

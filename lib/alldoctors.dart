@@ -12,9 +12,7 @@ class AllDoctors extends StatelessWidget {
         title: Text(
           "Doctor List",
           style: TextStyle(
-              fontSize: 17,
-              color: Colors.blue[600],
-              fontWeight: FontWeight.bold),
+              fontSize: 17, color: Colors.white, fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -73,88 +71,109 @@ class AllDoctors extends StatelessWidget {
               ),
             ),
           ),
-          Card(
-            child: Container(
-              height: 120,
-              width: 500,
-              child: Column(children: [
-                Padding(padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
-                Text(
-                  "Dr. Janice",
-                  style: TextStyle(fontSize: 18, color: Colors.black),
-                ),
-                Text(
-                  "General Physician",
-                  style: TextStyle(fontSize: 14),
-                ),
-                Text(
-                  "MD-General Medicine, yuhhutiuu",
-                  style: TextStyle(fontSize: 14),
-                ),
-                SizedBox(
-                  height: 8.0,
-                ),
-                Text(
-                  "Price 200",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                ),
-              ]),
+          InkWell(
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => DoctorInfo()));
+            },
+            child: Card(
+              child: Container(
+                height: 120,
+                width: 500,
+                child: Column(children: [
+                  Padding(
+                      padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
+                  Text(
+                    "Dr. Janice",
+                    style: TextStyle(fontSize: 18, color: Colors.black),
+                  ),
+                  Text(
+                    "General Physician",
+                    style: TextStyle(fontSize: 14),
+                  ),
+                  Text(
+                    "MD-General Medicine, yuhhutiuu",
+                    style: TextStyle(fontSize: 14),
+                  ),
+                  SizedBox(
+                    height: 8.0,
+                  ),
+                  Text(
+                    "Price 200",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ]),
+              ),
             ),
           ),
-          Card(
-            child: Container(
-              height: 120,
-              width: 500,
-              child: Column(children: [
-                Padding(padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
-                Text(
-                  "Dr. Janice",
-                  style: TextStyle(fontSize: 18, color: Colors.black),
-                ),
-                Text(
-                  "General Physician",
-                  style: TextStyle(fontSize: 14),
-                ),
-                Text(
-                  "MD-General Medicine, yuhhutiuu",
-                  style: TextStyle(fontSize: 14),
-                ),
-                SizedBox(
-                  height: 8.0,
-                ),
-                Text(
-                  "Price 200",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                ),
-              ]),
+          InkWell(
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => DoctorInfo()));
+            },
+            child: Card(
+              child: Container(
+                height: 120,
+                width: 500,
+                child: Column(children: [
+                  Padding(
+                      padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
+                  Text(
+                    "Dr. Janice",
+                    style: TextStyle(fontSize: 18, color: Colors.black),
+                  ),
+                  Text(
+                    "General Physician",
+                    style: TextStyle(fontSize: 14),
+                  ),
+                  Text(
+                    "MD-General Medicine, yuhhutiuu",
+                    style: TextStyle(fontSize: 14),
+                  ),
+                  SizedBox(
+                    height: 8.0,
+                  ),
+                  Text(
+                    "Price 200",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ]),
+              ),
             ),
           ),
-          Card(
-            child: Container(
-              height: 120,
-              width: 500,
-              child: Column(children: [
-                Padding(padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
-                Text(
-                  "Dr. Janice",
-                  style: TextStyle(fontSize: 18, color: Colors.black),
-                ),
-                Text(
-                  "General Physician",
-                  style: TextStyle(fontSize: 14),
-                ),
-                Text(
-                  "MD-General Medicine, yuhhutiuu",
-                  style: TextStyle(fontSize: 14),
-                ),
-                SizedBox(
-                  height: 8.0,
-                ),
-                Text(
-                  "Price 200",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                ),
-              ]),
+          InkWell(
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => DoctorInfo()));
+            },
+            child: Card(
+              child: Container(
+                height: 120,
+                width: 500,
+                child: Column(children: [
+                  Padding(
+                      padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
+                  Text(
+                    "Dr. Janice",
+                    style: TextStyle(fontSize: 18, color: Colors.black),
+                  ),
+                  Text(
+                    "General Physician",
+                    style: TextStyle(fontSize: 14),
+                  ),
+                  Text(
+                    "MD-General Medicine, yuhhutiuu",
+                    style: TextStyle(fontSize: 14),
+                  ),
+                  SizedBox(
+                    height: 8.0,
+                  ),
+                  Text(
+                    "Price 200",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ]),
+              ),
             ),
           ),
           Card(
