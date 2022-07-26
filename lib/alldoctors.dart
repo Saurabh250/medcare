@@ -84,11 +84,11 @@ class AllDoctors extends StatelessWidget {
                   Padding(
                       padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
                   Text(
-                    "Dr. Janice",
+                    "Dr. Yash Vanmalli",
                     style: TextStyle(fontSize: 18, color: Colors.black),
                   ),
                   Text(
-                    "General Physician",
+                    "Radiologist",
                     style: TextStyle(fontSize: 14),
                   ),
                   Text(
@@ -99,7 +99,7 @@ class AllDoctors extends StatelessWidget {
                     height: 8.0,
                   ),
                   Text(
-                    "Price 200",
+                    "Price 800",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ]),
@@ -119,11 +119,11 @@ class AllDoctors extends StatelessWidget {
                   Padding(
                       padding: EdgeInsets.only(top: 15, left: 90, right: 50)),
                   Text(
-                    "Dr. Janice",
+                    "Dr. Swaraj",
                     style: TextStyle(fontSize: 18, color: Colors.black),
                   ),
                   Text(
-                    "General Physician",
+                    "Neurosurgeon",
                     style: TextStyle(fontSize: 14),
                   ),
                   Text(
@@ -134,7 +134,7 @@ class AllDoctors extends StatelessWidget {
                     height: 8.0,
                   ),
                   Text(
-                    "Price 200",
+                    "Price 900",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ]),
