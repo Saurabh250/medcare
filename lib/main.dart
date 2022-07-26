@@ -7,7 +7,6 @@ import 'package:medcare/routes.dart';
 
 import 'Utils/size_config.dart';
 import 'globalvariable.dart';
-import 'wrapper.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,13 +25,10 @@ class MyApp extends StatelessWidget {
           builder: (context, orientation) {
             SizeConfig().init(constraints, orientation);
             return MaterialApp(
-              navigatorKey: GlobalVariable.navState,
-              title: 'Amigo',
-              debugShowCheckedModeBanner: false,
-              home: Wrapper(
-                index: 0,
-              ),
-            );
+                navigatorKey: GlobalVariable.navState,
+                title: 'Amigo',
+                debugShowCheckedModeBanner: false,
+                home: LoginScreen());
           },
         );
       },

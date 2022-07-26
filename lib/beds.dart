@@ -9,7 +9,7 @@ import 'package:medcare/Services/http_request.dart';
 
 class beds extends StatefulWidget {
   beds({super.key, required this.title});
-  late String title;
+  late final String title;
 
   @override
   State<beds> createState() => _bedsState();

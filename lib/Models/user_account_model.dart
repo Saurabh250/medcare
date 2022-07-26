@@ -28,7 +28,6 @@ class UserModel {
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
-    //TODO: ADD Verification booleans
     return UserModel(
       user_name: json['name'],
       user_email: json['email'],

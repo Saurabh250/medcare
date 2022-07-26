@@ -3,7 +3,7 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
-import 'package:medcare/Models/bookingDetail_model.dart';
+import 'package:medcare/Models/booking_detail_model.dart';
 import 'package:medcare/Services/auth.dart';
 import 'package:http/http.dart' as http;
 

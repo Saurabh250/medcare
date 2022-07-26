@@ -25,20 +25,16 @@ class AccountInfo extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 30),
-        child: Container(
-          child: TextButton(
-            child: Text(
-              "log Out",
-              style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold),
-            ),
-            onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => LoginScreen()));
-            },
+        child: TextButton(
+          child: Text(
+            "log Out",
+            style: TextStyle(
+                fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
           ),
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => LoginScreen()));
+          },
         ),
       ),
     );

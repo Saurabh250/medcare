@@ -5,7 +5,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:medcare/Models/specialistModel.dart';
 import 'package:medcare/Services/http_request.dart';
-import 'package:medcare/Utils/size_config.dart';
 import 'package:medcare/alldoctors.dart';
 
 class Specialist extends StatelessWidget {
@@ -39,11 +38,9 @@ class Specialist extends StatelessWidget {
             Center(
               child: Padding(
                 padding: const EdgeInsets.only(top: 70),
-                child: Container(
-                  child: Text(
-                    "Specialist",
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                  ),
+                child: Text(
+                  "Specialist",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
               ),
             ),

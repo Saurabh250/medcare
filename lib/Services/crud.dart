@@ -1,6 +1,3 @@
-import 'dart:developer';
-import 'package:medcare/Models/expertModel.dart';
-
 class DatabaseService {
   //---- List of all doctors to be converted into ExpertModel
 /*   List<ExpertModel> getExpertModelList(QuerySnapshot snapshot) {
